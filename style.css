@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	background-color: #f44336;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding-left: 2rem;
+}
+
+.title {
+	color: white;
+	/* text-align: center; */
+}
+
+.to-dos {
+	list-style: none;
+	color: white;
+	display: flex;
+	gap: 1rem;
+}

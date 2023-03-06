@@ -8,18 +8,20 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<!-- <form action="" class="form">
-			<input type="text" class="input" placeholder="Enter your to Do" />
-			<button id="submit-btn">Submit</button>
-			<ol class="toDoList">
-				<li class="toDoItem">Create HTML</li>
-			</ol>
-		</form> -->
-
-		<h1>To Do List</h1>
 		<div class="container">
-			<input id="inputField" type="text" /><button id="addToDo">+</button>
-			<div class="to-dos" id="toDoContainer"></div>
+			<h1 class="title">To Do List</h1>
+			<form action="#" class="form">
+				<input id="inputField" type="text" placeholder="Enter your to Do" />
+				<button id="addToDo">+</button>
+			</form>
+			<ul class="to-dos" id="toDoContainer">
+				<li class="todo-item">
+					First Element
+					<button class="btn done">Done</button>
+					<button class="btn edit">Edit</button>
+					<button class="btn delete">Delete</button>
+				</li>
+			</ul>
 		</div>
 
 		<script src="app.js"></script>
