@@ -12,6 +12,10 @@ addToDoButton.addEventListener("click", function () {
 	todoItem.innerText = inputField.value;
 	toDoContainer.appendChild(todoItem);
 	inputField.value = "";
+	let done = document.createElement("button");
+	// done.classList.add("btn done");
+	done.innerText = "Done";
+	todoItem.appendChild(done);
 	todoItem.addEventListener("click", function () {
 		todoItem.style.textDecoration = "line-through";
 	});
