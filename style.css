@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 
 /* Custom properties for colors */
 :root {
-	--bg-color: #f44336;
+	--bg-color: #4f4e44;
 	--bg-light: #d5d5d5;
 	--btn-bg-color: #d5d5d5;
-	--btn-hover-color: #000;
+	--btn-hover-color: #372f1e;
 	--text-dark: #262626;
 	--text-light: white;
-	--shadow-color: #ee0707;
+	--shadow-color: #4f4e44;
 }
 
 * {
@@ -24,10 +24,14 @@ body {
 
 .container {
 	width: 90%;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 2rem;
 	margin: auto;
+	background-image: url(https://thumbs.dreamstime.com/b/to-do-list-to-do-list-written-notepad-pen-cup-coffee-flower-top-wooden-table-102106171.jpg);
+	background-size: cover;
 }
 
 /* direct child of flex-container */
@@ -39,7 +43,7 @@ body {
 
 /* direct child of flex-container */
 .form {
-	width: 100%;
+	width: 90%;
 	display: flex;
 }
 
@@ -57,8 +61,9 @@ body {
 /* Need to remove default border */
 #inputField:hover,
 #inputField:focus,
+#inputField:focus-visible,
 #inputField:active {
-	border: 0.5px solid #e2837c;
+	/* outline: solid grey; */
 }
 
 .add {
@@ -69,7 +74,7 @@ body {
 /* direct child of flex-container */
 .to-dos {
 	list-style: none;
-	width: 100%;
+	width: 90%;
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -105,10 +110,12 @@ body {
 .btn:active {
 	background-color: var(--btn-hover-color);
 	color: var(--text-light);
+	cursor: pointer;
 }
 /* Style after doneButton click */
-.ready {
-	text-decoration: line-through solid 2px green;
+.line-through {
+	text-decoration: line-through;
+	color: grey;
 }
 
 @media only screen and (min-width: 576px) {
