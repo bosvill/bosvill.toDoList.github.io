@@ -1,25 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+/* Custom properties for colors */
+:root {
+	--bg-color: #4f4e44;
+	--bg-light: #d5d5d5;
+	--btn-bg-color: #d5d5d5;
+	--btn-hover-color: #372f1e;
+	--text-dark: #262626;
+	--text-light: white;
+	--shadow-color: #4f4e44;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
+body {
+	background-color: var(--bg-color);
+	font-family: Lato, sans-serif;
+}
+
 .container {
-	background-color: #f44336;
+	width: 90%;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 2rem;
-	padding-left: 2rem;
+	margin: auto;
+	background-image: url(https://thumbs.dreamstime.com/b/to-do-list-to-do-list-written-notepad-pen-cup-coffee-flower-top-wooden-table-102106171.jpg);
+	background-size: cover;
 }
 
+/* direct child of flex-container */
 .title {
 	color: white;
-	/* text-align: center; */
+	margin-top: 3rem;
+	text-shadow: 0.3rem 0.3rem 0.1rem var(--shadow-color);
 }
 
-/* .to-dos {
+/* direct child of flex-container */
+.form {
+	width: 90%;
+	display: flex;
+}
+
+#inputField {
+	width: 100%;
+	flex: 1.5;
+	padding: 0.5rem 1rem;
+	font-family: Lato, sans-serif;
+	font-size: 1rem;
+	font-style: italic;
+	border: none;
+	box-shadow: 0.3rem 0.3rem 0.1rem var(--shadow-color);
+}
+
+/* Need to remove default border */
+#inputField:hover,
+#inputField:focus,
+#inputField:focus-visible,
+#inputField:active {
+	/* outline: solid grey; */
+}
+
+.add {
+	flex: 0.5;
+	box-shadow: 0.3rem 0.3rem 0.1rem var(--shadow-color);
+}
+
+/* direct child of flex-container */
+.to-dos {
 	list-style: none;
+	width: 90%;
 	color: white;
 	display: flex;
+	flex-direction: column;
 	gap: 1rem;
-} */
+}
+
+/*Grid container with second row for buttons on screens < 576px*/
+.todo-item {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	box-shadow: 0.3rem 0.3rem 0.1rem var(--shadow-color);
+}
+
+.todo-text {
+	grid-column: 1/-1; /*spans entire row*/
+	background-color: var(--bg-light);
+	color: var(--text-dark);
+	padding: 0.5rem 1rem;
+	width: 100%;
+}
+
+/* Common styles for all buttons */
+.btn {
+	font-family: Lato, sans-serif;
+	font-size: 1rem;
+	border: none;
+	padding: 0.5rem 1rem;
+	background-color: var(--btn-bg-color);
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+	background-color: var(--btn-hover-color);
+	color: var(--text-light);
+	cursor: pointer;
+}
+/* Style after doneButton click */
+.line-through {
+	text-decoration: line-through;
+	color: grey;
+}
+
+@media only screen and (min-width: 576px) {
+	.todo-item {
+		grid-template-columns: 4fr 0.7fr 0.7fr 0.7fr;
+		grid-template-rows: 1fr;
+	}
+	.todo-text {
+		grid-column: 1;
+	}
+	.add {
+		flex: 0.75;
+	}
+	#inputField {
+		flex: 2;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.container {
+		width: 80%;
+	}
+	.todo-item {
+		grid-template-columns: 4fr 0.6fr 0.6fr 0.6fr;
+		grid-template-rows: 1fr;
+	}
+	#inputField {
+		flex: 2.5;
+	}
+}
