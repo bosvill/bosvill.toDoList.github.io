@@ -34,7 +34,7 @@ const add = () => {
 
 	doneButton.addEventListener('click', () => {
 		todoText.classList.toggle('line-through')
-		editButton.setAttribute('disabled', 'disabled')
+		// editButton.setAttribute('disabled', 'disabled')
 	})
 
 	editButton.addEventListener('click', () => {
