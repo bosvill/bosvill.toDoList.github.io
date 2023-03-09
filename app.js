@@ -3,7 +3,6 @@ const todoContainer = document.querySelector('.to-dos')
 const todoItem = document.querySelectorAll('.todo-item')
 const inputField = document.querySelector('#inputField')
 
-
 const add = () => {
 	let todoItem = document.createElement('li')
 	todoItem.classList.add('todo-item')
@@ -34,7 +33,7 @@ const add = () => {
 	)
 
 	doneButton.addEventListener('click', () => {
-		todoText.classList.add('line-through')
+		todoText.classList.toggle('line-through')
 		editButton.setAttribute('disabled', 'disabled')
 	})
 
