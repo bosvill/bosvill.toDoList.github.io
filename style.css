@@ -58,12 +58,12 @@ body {
 
 /* direct child of flex-container */
 .form {
-	width: 90%;
+	width: 70%;
 	display: flex;
 }
 
 #inputField {
-	width: 100%;
+	width: 70%;
 	flex: 1.5;
 	padding: 0.5rem 1rem;
 	font-family: Lato, sans-serif;
@@ -71,6 +71,7 @@ body {
 	font-style: italic;
 	border: none;
 	box-shadow: 0.3rem 0.3rem 0.1rem var(--shadow-color);
+	border-radius: 5px;
 }
 
  /* Need to remove default border */
@@ -108,7 +109,7 @@ body {
 	background-color: var(--bg-light);
 	color: var(--text-dark);
 	padding: 0.5rem 1rem;
-	width: 100%;
+	width: 70%;
 }
 
 /* Common styles for all buttons */
@@ -119,6 +120,8 @@ body {
 	padding: 0.5rem 1rem;
 	background-color: var(--btn-bg-color);
 	color: var(--text-dark);
+	border-radius: 5px;
+	margin-left: 10px;
 }
 
 .btn:hover,
@@ -163,4 +166,18 @@ body {
 		flex: 2.5;
 	}
 
+}
+ul li {
+  cursor: pointer;
+  padding:  20px;
+  background: #b5c3bd;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-left: 50%;
+  border-radius: 15px;
+}
+
+
+ul li:nth-child(odd) {
+  background: rgb(81, 89, 97);
 }
