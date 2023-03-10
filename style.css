@@ -9,6 +9,21 @@
 	--text-dark: #262626;
 	--text-light: white;
 	--shadow-color: #4f4e44;
+	--input-color:#4f4e44;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	/* appearance: none; */
+	 accent-color: var(--bg-color);
+	
+	 /* background-color:var(--btn-bg-color) ;  */
+	 font-size: 1rem;
+	 
+	 /* text-align: center; */
+	 padding-top: 0.5rem;
+	 color: var(--text-dark);
+	 cursor: pointer;
 }
 
 * {
@@ -58,13 +73,13 @@ body {
 	box-shadow: 0.3rem 0.3rem 0.1rem var(--shadow-color);
 }
 
-/* Need to remove default border */
+ /* Need to remove default border */
 #inputField:hover,
 #inputField:focus,
 #inputField:focus-visible,
 #inputField:active {
-	/* outline: solid grey; */
-}
+	 outline: 1px solid var(--bg-color); 
+} 
 
 .add {
 	flex: 0.5;
@@ -103,11 +118,12 @@ body {
 	border: none;
 	padding: 0.5rem 1rem;
 	background-color: var(--btn-bg-color);
+	color: var(--text-dark);
 }
 
 .btn:hover,
 .btn:focus,
-.btn:active {
+.btn:active  {
 	background-color: var(--btn-hover-color);
 	color: var(--text-light);
 	cursor: pointer;
@@ -132,6 +148,7 @@ body {
 	#inputField {
 		flex: 2;
 	}
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -145,4 +162,5 @@ body {
 	#inputField {
 		flex: 2.5;
 	}
+
 }
